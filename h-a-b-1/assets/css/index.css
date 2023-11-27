@@ -1,0 +1,336 @@
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+/* whole html style  */
+  html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-size: 65.6%;
+  }
+
+  /* root element style  */
+  :root{
+    --primary-color:#191d23;
+    --major-color:#222;
+    --secondary-color:#989daa;
+    --min-color:#dedcdc;
+    --main-color:#fff;
+    --color-bg:#e57734;
+    --ms-b-color:#3e2922;
+    --bs-color:#072e33;
+    --color-dm:#a42527;
+    --bs-color:#22162d;
+    --big-color:#6da5c0;
+    --favorite-color:#294d61;
+    --navbar-width-fluid:100%;
+    --container-width:95%;
+    --transition: all 0.3s linear;
+  }
+/* css reset */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: none;
+    outline: none;
+    offset: none;
+    inset: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--main-color);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+  }
+
+  body{
+    background:url('../images/pasta-1181189_640.jpg')no-repeat,linear-gradient(rgba(0,0,0,1),rgba(0,0,0,1));
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  /* navigation section style */
+  .navbar{
+    position: fixed;
+    width: var(--navbar-width-fluid);
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    font-size: 2.3rem;
+    background:#d0c1c1;
+  }
+.width{
+width:var(--container-width);
+margin: auto;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+  }
+
+  .navbar-nav{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+  }
+
+  
+
+  .navbar-brand img{
+    width: 120px;
+  }
+  
+  .nav-link{
+    color:#000;
+    padding: 0.5rem  1.5rem;
+    
+    transition: var(--transition);
+  }
+
+  
+
+  .nav-link.active,.nav-link:hover{
+    background: var(--favorite-color);
+    color: var(--min-color);
+
+  }
+
+  .navbar-nav.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .btn-brand{
+    background: var(--color-bg);
+    padding:0.5rem  1.7rem;
+    border-radius: 0.5rem;
+    color:var(--min-color);
+    transition: var(--transition);
+  }
+
+  .btn{
+    font-size: 2rem;
+    background: var(--color-bg);
+    padding: 1rem 1.7rem;
+    border-radius: 5px;
+    transition: var(--transition);
+    color:var(--min-color);
+   
+  }
+
+
+  .btn:hover{
+   background: transparent;
+    border: 1px solid  var(--main-color);
+    color:var(--main-color);
+  }
+
+  .btn-brand:hover{
+    background: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--min-color);
+  }
+
+  .menu-bars .fa-bars{
+    background: var(--bs-color);
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    border-radius:5px;
+    color:var(--main-color);
+    transition: var(--transition);
+    display: block;
+  }
+
+  #menu-bars{
+    display: none;
+  }
+
+  .menu-bars .fa-bars:hover{
+    background: #072e33;
+    color: var(--color-bg);
+  }
+
+  main{
+    position: relative;
+  }
+
+  .container-wrapper .row{
+    padding-top: 10rem;
+    position: relative;
+  }
+
+.container-wrapper .col{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.image1{
+  background-size: cover;
+  background: url('../images/appetite.jpg'),linear-gradient(rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.25));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  object-fit: contain;
+  object-position: center;
+}
+
+.image2{
+  background: url('../images/food-632215_640.jpg'),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+
+.text{
+  padding: 0 2rem;
+}
+
+.text p{
+  font-size: 2rem;
+  text-align: justify;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  line-height: 1.65;
+  letter-spacing: 0.1px;
+}
+
+/* .text p:hover{
+  color: var(--min-color);
+  transition: var(--transition);
+} */
+
+.caption{
+margin-bottom: 2rem;
+font-size: 2rem;
+ position: absolute;
+ top: 70%;
+ left: 40%;
+ right: 40%;
+}
+
+.event-wrapper{
+  position: relative;
+  background:linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)) ;
+  margin-bottom: 2rem;
+  padding: 5rem 0;
+}
+
+
+ .event-wrapper h1{
+  text-align: center;
+  padding: 20px;
+  font-size: 2.5rem;
+
+}
+
+.event-wrapper .line{
+  width: 12%;
+  height: 5px;
+  background: #fc0404;
+  margin: auto;
+}
+
+.event-row{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.events-col{
+  background: #072e33;
+  padding: 2rem;
+  flex-basis: 30%;
+}
+
+
+footer{
+  background: #0b0b2d;
+  margin-top: 2rem;
+  line-height: 10;
+}
+
+.footer-row{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+
+
+  /* media query screen style for mobile devices  */
+  @media screen and (max-width:992px) {
+    html{
+        font-size: 60.9%;
+      }
+  }
+
+  @media screen and (max-width:769px) {
+    .container{
+        width:98%;
+      }
+
+      img{
+        width: 100%;
+      }
+
+      .navbar-nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background:var(--main-color);
+        display: block;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: var(--transition);
+       
+         }
+    
+        .nav-item{
+            display: block;
+        }
+    
+        .nav-link{
+            display: block;
+            color: var(--primary-color);
+            padding: 1.5rem 0;
+            border-bottom: var(--major-color) solid 2px;
+        }
+
+        #menu-bars{
+          display:initial;
+        }
+
+        .caption{
+          margin-bottom: 3rem;
+        
+        }
+
+        .event-row{
+          display: flex;
+          flex-direction:column;
+          flex-wrap: wrap;
+          gap: 2rem;
+        }
+        .events-col{
+         
+        }
+
+        .menu{
+          
+          background: #000;
+        }
+  }
+
+
+
+
+
